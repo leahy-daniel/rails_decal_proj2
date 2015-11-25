@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get '/subject/:id/', to: 'course#index', as: 'subject'
   get '/courses/:id/', to: 'course#show', as: 'course'
 
-  get '/profile/', to: 'user#show', as: 'current_user'
-  get 'post/:id/', to: 'post#show', as: 'post'
+  get '/user/:id/', to: 'user#show', as: 'user'
+  get '/post/:id/', to: 'post#show', as: 'post'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

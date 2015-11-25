@@ -6,7 +6,12 @@
 <body>
 	<div>
 	<h1><%= @course.name %></h1>
-	<p><%= @course.description %></p>
+	<p>Description: <%= @course.description %></p>
+	<% @posts.each do |p| %>
+		<h3>Submitted By: <%= link_to p.user.email, user_path(p.user) %></h3>
+		<h3><%= link_to p.title, post_path(p) %></h3>
+		<p><%= p.content %></p>
+	<% end %>
 	</div>
 </body>
 </html>

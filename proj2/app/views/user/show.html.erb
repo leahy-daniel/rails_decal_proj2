@@ -4,13 +4,17 @@
   <title>Course</title>
 </head>
 <body>
-	<h2>My Posts:</h2>
+	<h2><%= @user.email %>'s posts:</h2>
 	<div>
 		<% @posts.each do |p| %>
-			<h3><%= link_to p.title, post_path(p) %></h3>
+			<h3>Title: <%= link_to p.title, post_path(p) %></h3>
+			<h3>Course name: <%= link_to p.course.name, course_path(p.course) %></h3>
 			<p><%= p.content %></p>
 		<% end %>
 	</div>
+	<% if @user == current_user %>
+		<h2>Some form to make a new post.</h2>
+	<% end %>
 </body>
 </html>
 

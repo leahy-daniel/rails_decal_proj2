@@ -1,6 +1,6 @@
 class SubjectController < ApplicationController
 	def index
-		@subjects = Subject.find params[:id]
-		@courses = @subjects.courses
+		@college = College.find params[:id]
+		@subjects = @college.subjects
 	end
 end

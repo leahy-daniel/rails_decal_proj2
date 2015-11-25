@@ -14,7 +14,7 @@ subjects = [ ["social sciences", 1], ["biological sciences", 1], ["mathematics",
 subjects.each do |name, college|
 	Subject.create name: name, college_id: college
 end
-courses = [ ["Math 666", 3], ["Science 555", 1], ["Dancing", 5], ["More Dancing", 5] ]
-courses.each do |name, subject|
-	Course.create name: name, subject_id: subject
+courses = [ ["Math 666", 3, "This is a math course."], ["Science 555", 1, "Science course."], ["Dancing", 5, "Learn to dance."], ["More Dancing", 5, "asdf."] ]
+courses.each do |name, subject, description|
+	Course.create name: name, subject_id: subject, description: description
 end

@@ -2,10 +2,10 @@ Rails.application.routes.draw do
 
   devise_for :admins
   devise_for :users
-  root 'layouts#index'
-  get '/colleges/:id/', to: 'college#index', as: 'college'
-  get '/subject/:id/', to: 'subject#index', as: 'subject'
-  get '/courses/:id/', to: 'courses#index', as: 'courses'
+  root 'college#index'
+  get '/colleges/:id/', to: 'subject#index', as: 'college'
+  get '/subject/:id/', to: 'course#index', as: 'subject'
+  get '/courses/:id/', to: 'course#show', as: 'course'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

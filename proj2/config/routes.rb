@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
   root 'layouts#index'
+  get '/colleges/:id/', to: 'college#index', as: 'college'
+  get '/subject/:id/', to: 'subject#index', as: 'subject'
+  get '/courses/:id/', to: 'courses#index', as: 'courses'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

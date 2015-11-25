@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Proj2</title>
+  <title>Subjects</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -15,8 +15,8 @@
 	  </div>
 	</nav>
 	<div>
-	<% @colleges.each do |c| %>
-		<li><%= link_to c.name, college_path(c) %></li>
+	<% @subjects.each do |s| %>
+		<li><%= link_to s.name, subject_path(s) %></li>
 	<% end %>
 	</div>
 </body>

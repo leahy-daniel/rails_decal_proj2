@@ -1,23 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Proj2</title>
+  <title>Welcome</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+ <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default" style="margin-bottom:0;">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
-	        <h1><%= link_to "Fuby", root_path %></h1>
+	    	<a class="navbar-brand" <%= link_to "Fuby", root_path %> </a>
 	    </div>
+
+	    <div id="navbar" class="navbar-collapse collapse">
+		    <div class="nav navbar-nav navbar-right">
+		    	<ul class="nav nav-pills pull-right" style="margin-top: .5em;">
+				  <% if user_signed_in? %>
+				    <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+				  <% else %>
+				    <li><%= link_to "Sign in", new_user_session_path %></li>
+				    <li><%= link_to "Sign up", new_user_registration_path %></li>
+				  <% end %>
+				</ul>
+		    </div>
+		 </div>
 	  </div>
 	</nav>
+
+	<div class="splash">
+		<div class="container">
+			<div id="container-wrap">
+				<h2>Real Students</h2>
+				<h2><span style="letter-spacing: 1.7px">Real Courses</span></h2>
+				<h2><span style="letter-spacing: 5px">Real Advice</span></h2>
+			</div>
+		</div>
+	</div>		
+
+
+	<div class="SignUp">
+		
+	</div>
+
+
 	<div>
 	<% @colleges.each do |c| %>
 		<li><%= link_to c.name, college_path(c) %></li>
 	<% end %>
 	</div>
+
 </body>
 </html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href="css/hover.css" rel="stylesheet" media="all">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	
+	<a href="index.html" class="selected" data-menu="index">
+		<section id="splash">
+			<div class="splash">
+				<div class="container">
+					<div id="container-wrap">
+						<h2 class="hvr-grow splash-titles">Real Students</h2>
+						<h2 class="hvr-grow splash-titles">Real Courses</h2>
+						<h2 class="hvr-grow splash-titles">Real Advice</h2>
+						<a href="#about" style="color: black"><p class="nextpage-black"><span class="glyphicon glyphicon-chevron-down hvr-hang nextpage" aria-hidden="true"></span></p></a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</a>	
+
+	<a name="about" class="not-selected"></a>
+		<section id="about">
+			<div class="about-header">
+				<div class="container">
+					<u><h1>How does Fuby work?</h1></u>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sem posuere eros lacinia feugiat. Praesent dictum iaculis tortor, quis aliquet nisl. Mauris eleifend pretium purus non ornare. Suspendisse efficitur, mi at facilisis sodales, tortor elit placerat mi, non luctus elit metus sed justo. Sed nunc massa, hendrerit in tellus in, tincidunt hendrerit justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut leo lorem, malesuada in magna non, rhoncus feugiat est. Vestibulum pulvinar condimentum tortor in vehicula. Proin sagittis diam ac lacinia luctus. Nulla elementum tempus odio. Nam urna nibh, egestas ut lectus sed, aliquet ultrices mauris. Maecenas sed eleifend dolor, ut ullamcorper nulla. Cras mauris diam, mattis id ultrices id, tincidunt nec tortor. Sed luctus eros non lacus varius ullamcorper. Morbi et ipsum vel massa suscipit commodo nec vel metus.</p>
+
+					<p>Morbi aliquet scelerisque pellentesque. Mauris iaculis turpis et enim cursus dapibus. Maecenas luctus dictum mi eget sollicitudin. Mauris eu augue consequat, pellentesque nisi ac, egestas dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi dictum quam quis nibh aliquet congue. Curabitur molestie nulla at velit elementum, id congue dui lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris purus ante, sagittis at mauris ut, mollis egestas neque. Nunc id velit nec turpis vulputate varius. Nam lacinia sed arcu ut bibendum. Aenean id vestibulum ex. Cras porta, odio sed venenatis dapibus, leo ex consectetur dolor, vel dapibus mi metus nec ligula.</p>
+
+					<p>Fusce vitae congue lacus. Sed mattis nibh vitae odio finibus dictum. Aenean sed metus purus. Pellentesque sit amet ex ac nibh faucibus vulputate vitae in neque. Proin tincidunt sagittis augue, id interdum nisi efficitur a. In ornare velit finibus turpis hendrerit fringilla. Aenean purus lacus, scelerisque nec imperdiet nec, fermentum ac magna. Praesent dapibus, lorem eget venenatis convallis, magna nibh laoreet quam, quis ornare enim magna eu felis. Donec ante ante, consectetur eget urna eget, ornare pretium nunc. Quisque ultrices arcu dolor, porttitor lobortis metus ultricies eu. Quisque eu leo non ipsum accumsan fringilla. Morbi id tortor arcu.</p>
+
+					<p>Integer suscipit facilisis massa, ac lobortis lectus maximus non. Fusce lacinia eu enim maximus dignissim. Etiam sodales, libero ut fringilla efficitur, eros mi interdum ante, elementum mollis libero mauris ac diam. Praesent tempor magna turpis, in tincidunt nunc dignissim eget. Pellentesque ut imperdiet sapien. Phasellus aliquam augue vel dui vehicula blandit. Ut vitae nisl facilisis, pharetra ligula at, molestie massa. Proin nulla dolor, condimentum vitae tincidunt a, vestibulum ac elit. Sed semper purus sit amet dui consectetur, in convallis eros pulvinar. Proin vel lorem at urna gravida elementum.</p>
+
+					<a href="#colleges" style="color: white"><p class="nextpage-white"><span class="glyphicon glyphicon-chevron-down hvr-hang nextpage" aria-hidden="true"></span></p></a>
+				</div>
+			</div>
+		</section>
+	
+	<a name="colleges" class="not-selected"></a>
+		<section id="college">
+			<div class="colleges">
+				<div class="container">
+					<h1>Our Supported Colleges</h1>
+
+					<div class="row">
+						<div id="CAL" class="col-md-4 cal">
+							<h2>Cal</h2>
+							<img src="<% asset_path('Cal.png')%>"/>
+						</div>
+
+
+						<div id="UCLA" class="col-md-4">
+							<h2>UCLA</h2>
+							<img src="<% asset_path('Cal.png')%>"/>
+						</div>
+
+						<div id="UCSB" class="col-md-4">
+							<h2>UCSB</h2>
+							<img src="<% asset_path('Cal.png')%>"/>
+						</div>
+					</div>
+
+					<div class="colleges-container">
+						<% @colleges.each do |c| %>
+							<li><%= link_to c.name, college_path(c) %></li>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	<section id="Signup">
+		<div class="about-header">
+			<div class="container">
+				<u><h1>Sign Up</h1></u>
+				<p>Sign Up Form Here</p>
+			</div>
+		</div>
+	</section>
+
+
+	
+
+</body>
+</html>

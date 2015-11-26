@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :admins
   devise_for :users
-  root 'college#index'
+  root 'layouts#index'
   get '/colleges/:id/', to: 'subject#index', as: 'college'
   get '/subject/:id/', to: 'course#index', as: 'subject'
   get '/courses/:id/', to: 'course#show', as: 'course'

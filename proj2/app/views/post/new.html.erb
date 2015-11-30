@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Post</title>
+</head>
+<body>
+	<%= form_for @post, url: create_post_path(@course), html: {method: "post"} do |p| %>
+		<%= p.text_field :title %>
+		<div/>
+		<%= p.text_area :content %>
+		<%= p.submit %>
+	<% end %>
+</body>
+</html>
+

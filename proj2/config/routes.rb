@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get '/user/:id/', to: 'user#show', as: 'user'
   get '/post/:id/', to: 'post#show', as: 'post'
+  post '/new_post/:id', to: 'post#new', as: 'new_post'
+  post '/create_post/:id', to: 'post#create', as: 'create_post'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

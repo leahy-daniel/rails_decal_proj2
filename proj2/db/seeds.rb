@@ -29,7 +29,7 @@ users.each do |email, pass, name, major, year, school|
 	user.school = school
 	user.save!
 end
-posts = [ ["Math is hard. Also dumb.", 1, "Math is terrible.", 1], ["Science cool.", 2, "Science post.", 2], ["Dancing", 3, "Dance post.", 2], ["Dancing is fun", 3, "I like dancing.", 1], ["I hate biology", 6, "Biology is the worst thing to ever exist.", 1] ]
+posts = [ ["Math is hard. Also dumb.", 1, "Math is terrible.", 1], ["Math is hard. Also dumb.", 1, "Math is terrible.", 1], ["Math is hard. Also dumb.", 1, "Math is terrible.", 1], ["Science cool.", 2, "Science post.", 2], ["Dancing", 3, "Dance post.", 2], ["Dancing is fun", 3, "I like dancing.", 1], ["I hate biology", 6, "Biology is the worst thing to ever exist.", 1] ]
 posts.each do |title, course_id, content, user_id|
 	Post.create title: title, course_id: course_id, content: content, user_id: user_id
 end

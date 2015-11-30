@@ -8,7 +8,7 @@
 	<h1><%= @course.name %> <small><%= @course.description %></small></h1>
 	<% @posts.each do |p| %>
 		<div class="well">
-			<h3>Submitted By: <%= link_to p.user.email, user_path(p.user) %></h3>
+			<h3>Submitted By: <%= link_to p.user.name, user_path(p.user) %></h3>
 			<h3><%= link_to p.title, post_path(p) %></h3>
 			<p><%= p.content %></p>
 		</div>

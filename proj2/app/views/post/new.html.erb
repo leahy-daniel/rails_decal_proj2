@@ -4,10 +4,11 @@
   <title>Post</title>
 </head>
 <body>
+	<h2>Course: <%= link_to @course.name, course_path(@course) %></h2>
 	<%= form_for @post, url: create_post_path(@course), html: {method: "post"} do |p| %>
-		<%= p.text_field :title %>
+		<h3>Title: </h3><%= p.text_field :title %>
 		<div/>
-		<%= p.text_area :content %>
+		<h3>Content: </h3><%= p.text_area :content %>
 		<%= p.submit %>
 	<% end %>
 </body>

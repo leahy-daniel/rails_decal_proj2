@@ -18,11 +18,15 @@ courses = [ ["English 16A", 1, "Introduction to Creative Writing."], ["English 1
 courses.each do |name, subject, description|
 	Course.create name: name, subject_id: subject, description: description
 end
-users = [ ["asdf@asdf.com", "asdfasdf" ], ["tim@email.com", "asdfasdf"] ]
-users.each do |email, pass|
+users = [ ["asdf@asdf.com", "asdfasdf", "asdf", "comp sci", "freshman", "Cal" ], ["tim@email.com", "asdfasdf", "tim", "Math", "junior", "Cal"] ]
+users.each do |email, pass, name, major, year, school|
 	user = User.new
 	user.email = email
 	user.password = pass
+	user.name = name
+	user.major = major
+	user.year = year
+	user.school = school
 	user.save!
 end
 posts = [ ["Math is hard. Also dumb.", 1, "Math is terrible.", 1], ["Science cool.", 2, "Science post.", 2], ["Dancing", 3, "Dance post.", 2], ["Dancing is fun", 3, "I like dancing.", 1], ["I hate biology", 6, "Biology is the worst thing to ever exist.", 1] ]

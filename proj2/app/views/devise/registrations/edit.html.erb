@@ -5,6 +5,26 @@
   </div>
   <div class="panel-body">
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+    <div class="form-group">
+        <%= f.label :name %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it', :default => "leave blank if you don't want to change it") %>)</i><br />
+        <%= f.name_field :name, class: "form-control" %>
+      </div>
+      <div class="control-group">
+        <%= f.label "Year", class: "control-label" %>
+        <div class="controls">
+        <%= f.select(:year, options_for_select([["Freshman", "Freshman"], ["Sophomore", "Sophomore"], ["Junior" ,"Junior"], ["Senior", "Senior"]])) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= f.label "School", class: "control-label" %>
+        <div class="controls">
+        <%= f.select(:school_type, options_for_select([["UC Berkeley", "UC Berkeley"], ["University of Southern California", "University of Southern California"], ["UC Los Angeles", "UC Los Angeles"]])) %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :major %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it', :default => "leave blank if you don't want to change it") %>)</i><br />
+        <%= f.text_field :major, class: "form-control" %>
+      </div>
       <div class="form-group">
         <%= f.label :email %>
         <%= f.email_field :email, autofocus: true, class: "form-control" %>

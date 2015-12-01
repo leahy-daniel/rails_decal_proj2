@@ -5,6 +5,26 @@
   </div>
   <div class="panel-body">
     <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form" }) do |f| %>
+     <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      <div class="control-group">
+        <%= f.label "Year", class: "control-label" %>
+        <div class="controls">
+        <%= f.select(:year, options_for_select([["Freshman", "Freshman"], ["Sophomore", "Sophomore"], ["Junior" ,"Junior"], ["Senior", "Senior"]])) %>
+        </div>
+      </div>
+      <div class="control-group">
+        <%= f.label "School", class: "control-label" %>
+        <div class="controls">
+        <%= f.select(:school_type, options_for_select([["UC Berkeley", "UC Berkeley"], ["University of Southern California", "University of Southern California"], ["UC Los Angeles", "UC Los Angeles"]])) %>
+        </div>
+      </div>
+      <div class="form-group">
+        <%= f.label :major %>
+        <%= f.text_field :major, class: "form-control" %>
+      </div>
       <div class="form-group">
         <%= f.label :email %>
         <%= f.email_field :email, autofocus: true, class: "form-control" %>

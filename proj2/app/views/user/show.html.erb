@@ -4,17 +4,25 @@
   <title>Course</title>
 </head>
 <body>
-	<h2><%= @user.email %>'s posts:</h2>
-	<div>
+<div>
+	<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+	<font size='5'><%= @user.name %></font>
+	<p><span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+	<font size='5'><%= @user.school %></font></p>
+	<p><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+	<font size='5'><%= @user.major %></font></p>
+	<p><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+	<font size='5'><%= @user.year %></font></p>
+<div class="page-header">
+	<h3><%= @user.name %>'s posts:</h3>
 		<% @posts.each do |p| %>
-			<h3>Title: <%= link_to p.title, post_path(p) %></h3>
-			<h3>Course name: <%= link_to p.course.name, course_path(p.course) %></h3>
-			<p><%= p.content %></p>
+			<div class="well">
+				<h4>Course name: <%= link_to p.course.name, course_path(p.course) %></h4>
+				<h4>Title: <%= link_to p.title, post_path(p) %></h4>
+				<p><%= p.content %></p>
+			</div>
 		<% end %>
 	</div>
-	<% if @user == current_user %>
-		<h2>Some form to make a new post.</h2>
-	<% end %>
 </body>
 </html>
 

@@ -7,8 +7,9 @@
 	<div>
 		<% @subjects.each do |s| %>
 			<div class="list-group">
-				<a href="/subject/<%= s.id %>" class="list-group-item"><%= s.name %></a>
-			</div>
+			<a href="/subject/<%= s.id %>" class="list-group-item"><%= s.name %> <span class="badge">
+				<%= s.courses.count %></span></a>
+		</div>
 		<% end %>
 	</div>
 </body>

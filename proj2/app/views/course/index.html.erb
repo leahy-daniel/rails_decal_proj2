@@ -6,7 +6,10 @@
 <body>
 	<div>
 	<% @courses.each do |c| %>
-		<li><%= link_to c.name, course_path(c) %></li>
+		<div class="list-group">
+			<a href="/courses/<%= c.id %>" class="list-group-item"><%= c.name %> <span class="badge">
+				<%= c.posts.count %></span></a>
+		</div>
 	<% end %>
 	</div>
 </body>

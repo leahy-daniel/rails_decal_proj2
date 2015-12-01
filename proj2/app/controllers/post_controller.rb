@@ -11,7 +11,7 @@ class PostController < ApplicationController
 		@post = Post.last
 		@post.update(:user => current_user, :course => Course.find(params[:id]))
 		if @post.save
-			redirect_to user_path(current_user)
+			redirect_to course_path(@post.course)
 		else
 			redirect_to root_path
 		end

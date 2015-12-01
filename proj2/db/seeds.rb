@@ -13,6 +13,8 @@ end
 subjects = [ ["social sciences", 1], ["biological sciences", 1], ["mathematics", 1], ["engineering sciences", 1], ["arts", 1] ]
 subjects.each do |name, college_id|
 	Subject.create name: name, college_id: college_id
+	Subject.create name: name, college_id: college_id + 1
+	Subject.create name: name, college_id: college_id + 2
 end
 courses = [ ["English 16A", 1, "Introduction to Creative Writing."], ["English 16B", 1, "Advnaced composiiton"], ["MCB 9000", 2, "Advanced af Molecular and Cellular Biology"], ["Bio 12", 2, "super advanced bio."], ["Math 1", 3, "Basic Calculus"], ["Engineering 1", 4, "basic engineering."], ["Dancing 1", 5, "Learn to dance."], ["Dancing 2", 5, "asdf."] ]
 courses.each do |name, subject, description|

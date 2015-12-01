@@ -46,9 +46,8 @@
 				<div class="container">
 					<div id="college-header">
 						<h2 style="font-size: 60px">Our Supported Colleges</h2>
-						<h4 style="font-size: 25px; padding-top: 0; font-weight:100px">With more to come
-					</h4>
-
+						<h4 style="font-size: 25px; padding-top: 0; font-weight:100px">With more to come</h4>
+					</div>
 					<div class="row">
 						
 						<a href="/colleges/1" ><div id="cal" class="col-md-4">
@@ -81,59 +80,62 @@
 			</div>
 		</section>
 
-	<a name="signup" class="not-selected"></a></a><	
+	<a name="signup" class="not-selected"></a></a>	
 	<section id="Signup">
-		<div class="about-header">
-			<div class="container">
-				<div class="sign">
-					<h2></h2>
-
-					<div class="panel panel-default">
-					  <div class="panel-heading">
-					    <h4><%= t('.sign_up', :default => "Sign up") %></h4>
-					  </div>
-					  <div class="panel-body">
-					    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form" }) do |f| %>
-					     <div class="form-group">
-					        <%= f.label :name %>
-					        <%= f.text_field :name, class: "form-control" %>
-					      </div>
-					      <div class="control-group">
-					        <%= f.label "Year", class: "control-label" %>
-					        <div class="controls">
-					        <%= f.select(:year, options_for_select([["Freshman", "Freshman"], ["Sophomore", "Sophomore"], ["Junior" ,"Junior"], ["Senior", "Senior"]])) %>
-					        </div>
-					      </div>
-					      <div class="control-group">
-					        <%= f.label "School", class: "control-label" %>
-					        <div class="controls">
-					        <%= f.select(:school_type, options_for_select([["UC Berkeley", "UC Berkeley"], ["University of Southern California", "University of Southern California"], ["UC Los Angeles", "UC Los Angeles"]])) %>
-					        </div>
-					      </div>
-					      <div class="form-group">
-					        <%= f.label :major %>
-					        <%= f.text_field :major, class: "form-control" %>
-					      </div>
-					      <div class="form-group">
-					        <%= f.label :email %>
-					        <%= f.email_field :email, class: "form-control" %>
-					      </div>
-					      <div class="form-group">
-					        <%= f.label :password %><br />
-					        <%= f.password_field :password, class: "form-control" %>
-					      </div>
-					      <div class="form-group">
-					        <%= f.label :password_confirmation %>
-					        <%= f.password_field :password_confirmation, class: "form-control" %>
-					      </div>
-					      <%= f.submit t('.sign_up', :default => "Sign up"), class: "btn btn-primary" %>
-					    <% end %>
-					  </div>
-					</div>
-
+		<div class="sign-up">
+				<div style="color: white; background-color:black; padding-top:1%; padding-bottom:1%; text-align:center" id="college-header">
+					<h2 style="font-size: 60px">Get started today!</h2>
+					<h4 style="font-size: 25px; padding-top: 0; font-weight:100px">Make an account here</h4>
 				</div>
+				<div class="container">
+					
 
-
+					<div class="sign">
+						<h2></h2>
+						<div class="panel panel-destyle="background-color:black" fault">
+						  <div class="panel-heading">
+						    <h4><%= t('.sign_up', :default => "Sign up") %></h4>
+						  </div>
+						  <div class="panel-body">
+						    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form" }) do |f| %>
+						     <div class="form-group">
+						        <%= f.label :name %>
+						        <%= f.text_field :name, class: "form-control" %>
+						      </div>
+						      <div class="control-group">
+						        <%= f.label "Year", class: "control-label" %>
+						        <div class="controls">
+						        <%= f.select(:year, options_for_select([["Freshman", "Freshman"], ["Sophomore", "Sophomore"], ["Junior" ,"Junior"], ["Senior", "Senior"]])) %>
+						        </div>
+						      </div>
+						      <div class="control-group">
+						        <%= f.label "School", class: "control-label" %>
+						        <div class="controls">
+						        <%= f.select(:school_type, options_for_select([["UC Berkeley", "UC Berkeley"], ["University of Southern California", "University of Southern California"], ["UC Los Angeles", "UC Los Angeles"]])) %>
+						        </div>
+						      </div>
+						      <div class="form-group">
+						        <%= f.label :major %>
+						        <%= f.text_field :major, class: "form-control" %>
+						      </div>
+						      <div class="form-group">
+						        <%= f.label :email %>
+						        <%= f.email_field :email, class: "form-control" %>
+						      </div>
+						      <div class="form-group">
+						        <%= f.label :password %><br />
+						        <%= f.password_field :password, class: "form-control" %>
+						      </div>
+						      <div class="form-group">
+						        <%= f.label :password_confirmation %>
+						        <%= f.password_field :password_confirmation, class: "form-control" %>
+						      </div>
+						      <%= f.submit t('.sign_up', :default => "Sign up"), class: "btn btn-primary" %>
+						    <% end %>
+						  </div>
+						</div>
+					</div>
+				
 			</div>
 		</div>
 	</section>

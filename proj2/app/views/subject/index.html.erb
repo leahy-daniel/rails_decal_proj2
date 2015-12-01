@@ -5,10 +5,11 @@
 </head>
 <body>
 	<div>
-	
-	<% @subjects.each do |s| %>
-		<li><%= link_to s.name, subject_path(s) %></li>
-	<% end %>
+		<% @subjects.each do |s| %>
+			<div class="list-group">
+				<a href="/subject/<%= s.id %>" class="list-group-item"><%= s.name %></a>
+			</div>
+		<% end %>
 	</div>
 </body>
 </html>

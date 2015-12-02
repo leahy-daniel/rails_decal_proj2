@@ -8,12 +8,19 @@
 	<h3>Submitted By: <%= link_to @post.user.email, user_path(@post.user) %></h3>
 	<h3><%= @post.title %></h3>
 	<p><%= @post.content %></p>
-	<% @comments.each do |c| %>
-		<h3><%= link_to c.user.name, user_path(c.user) %></h3>
-		<p><%= c.content %></p>
+	<div class="list-group">
+		<% @comments.each do |c| %>
+			<a href="/user/<%= c.user.id %>" class="list-group-item">
+				<h4 class="list-group-item-heading"><%= c.user.name %></h4>
+				<h4 class="list-group-item-heading"><%= c.content %></h4>
+			</a>
+		<% end %>
+	</div>
+	<% if current_user.present? %>
+		<%= button_to "New Comment", new_comment_path(@post) %>
 	<% end %>
-	<%= button_to "New Comment", new_comment_path(@post) %>
 	</div>
 </body>
-</html>
+</html> 
+
 

@@ -76,7 +76,7 @@ posts = [ ["Great Class.", 1, "Love this class. Easy A. Highly recommend", 1],
   ["Too hard", 13, "I have no idea what was going on, failed the final.", 2], 
   ["Science cool.", 11, "Its nise.", 2], 
   ["Dancing", 16, "Dance post.", 2], 
-  ["Dancing is fun", 15, "I like dancing.", 2], 
+  ["Rapping is fun", 15, "I like rapping.", 2], 
   ["Is this the Krusty Krab", 12, "No this is Patrick.", 2],
   
   ["Good English Class.", 18, "Teacher was clear, and assignments were reasonable. Recommend", 1], 
@@ -84,8 +84,8 @@ posts = [ ["Great Class.", 1, "Love this class. Easy A. Highly recommend", 1],
   ["Basic calculus", 22, "The prof was pretty much not understandable. I got an F.", 3], 
   ["Science cool.", 20, "Science post.", 2], 
   ["Dancing", 25, "Great dance class. Learned lots of new moves.", 2], 
-  ["Dancing is fun", 24, "I like dancing.", 1], 
-  ["I hate biology", 21, "Biology is the worst thing to ever exist.", 1]
+  ["Music is fun", 24, "I like music.", 1], 
+  ["I hate biology", 21, "Biology is the worst thing to ever exist.", 3]
   
   ]
 posts.each do |title, course_id, content, user_id|

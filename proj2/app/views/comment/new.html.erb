@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Comment</title>
+</head>
+<body>
+	<h2>Post: <%= link_to @post.title, post_path(@post) %></h2>
+	<%= form_for @comment, url: create_comment_path(@post), html: {method: "post"} do |p| %>
+		<h3>Content: </h3><%= p.text_area :content %>
+		<%= p.submit %>
+	<% end %>
+</body>
+</html>
+

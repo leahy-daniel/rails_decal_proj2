@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   post '/new_post/:id', to: 'post#new', as: 'new_post'
   post '/create_post/:id', to: 'post#create', as: 'create_post'
 
+  post '/create_comment/:id', to: 'comment#create', as: 'create_comment'
+  post '/new_comment/:id', to: 'comment#new', as: 'new_comment'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

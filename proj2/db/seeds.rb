@@ -37,7 +37,7 @@ courses = [ ["English 16A", 1, "Introduction to Creative Writing."],
   ["Chem 12", 7, "Advanced Chemistry, not really though."], 
   ["Math 20A", 8, "Basic Addition and Subtraction"], 
   ["Engineering 10", 9, "Introduction to Legos."], 
-  ["CS 55", 9, "Supervised iPad Free Time"]
+  ["CS 55", 9, "Supervised iPad Free Time"],
   ["Art 10A", 10, "Finger Painting."], 
   ["Media Studies 20", 10, "Introduction to Sesame Street"],
   
@@ -52,7 +52,7 @@ courses = [ ["English 16A", 1, "Introduction to Creative Writing."],
 courses.each do |name, subject, description|
 	Course.create name: name, subject_id: subject, description: description
 end
-users = [ ["johndoe@gmail.com", "youknowit", "John", "Philosophy", "Freshman", "Cal" ], ["timotheyc@email.com", "menameistimmy", "Tim Caudillo", "Math", "Junior", "UCLA"] ["bryantkobe@email.com", "GOAT", "Kobe Bryant", "Cognitive Science", "Sophmore", "USC"] ]
+users = [ ["johndoe@gmail.com", "youknowit", "John", "Philosophy", "Freshman", "Cal" ], ["timotheyc@email.com", "menameistimmy", "Tim Caudillo", "Math", "Junior", "UCLA"], ["bryantkobe@email.com", "GOATGOAT", "Kobe Bryant", "Cognitive Science", "Sophmore", "USC"] ]
 users.each do |email, pass, name, major, year, school|
 	user = User.new
 	user.email = email
@@ -69,7 +69,7 @@ posts = [ ["Great Class.", 1, "Love this class. Easy A. Highly recommend", 1],
   ["Science cool.", 3, "Science post.", 1], 
   ["Dancing", 8, "Dance post.", 1], 
   ["Dancing is fun", 7, "I like dancing.", 1], 
-  ["I hate biology", 4, "Biology is the worst thing to ever exist.", 1] 
+  ["I hate biology", 4, "Biology is the worst thing to ever exist.", 1], 
   
   ["Hard Clas.", 9, "reely hard. Took me three weecs to get passd d", 2], 
   ["I kept stepping on them.", 14, "Make sure you wear shoes.", 2], 
@@ -77,7 +77,7 @@ posts = [ ["Great Class.", 1, "Love this class. Easy A. Highly recommend", 1],
   ["Science cool.", 11, "Its nise.", 2], 
   ["Dancing", 16, "Dance post.", 2], 
   ["Dancing is fun", 15, "I like dancing.", 2], 
-  ["Is this the Krusty Krab", 12, "No this is Patrick.", 2]
+  ["Is this the Krusty Krab", 12, "No this is Patrick.", 2],
   
   ["Good English Class.", 18, "Teacher was clear, and assignments were reasonable. Recommend", 1], 
   ["Engineering is my life.", 23, "This class gave me hives.", 3], 

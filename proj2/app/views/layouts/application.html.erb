@@ -18,13 +18,17 @@
 		    <div class="nav navbar-nav navbar-right">
 		    	<ul class="nav nav-pills pull-right" style="margin-top: .5em;">
 				  <% if user_signed_in? %>
-				  	<li class="pull-left"><a href="#colleges">Colleges</a></li>
-				  	<li><a href="#about">About</a></li>
+				  	<% if request.original_fullpath == "/" %>
+				  		<li class="pull-left"><a href="#colleges">Colleges</a></li>
+				  		<li><a href="#about">About</a></li>
+				  	<% end %>
 				    <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
 				    <li><%= link_to "My Profile", user_path(current_user), :method => :get %></li>
 				  <% else %>
-				  	<li><a href="#colleges">Colleges</a></li>
-				  	<li><a href="#about">About</a></li>
+				  	<% if request.original_fullpath == "/" %>
+				  		<li><a href="#colleges">Colleges</a></li>
+				  		<li><a href="#about">About</a></li>
+				  	<% end %>
 				    <li><%= link_to "Sign in", new_user_session_path %></li>
 				    <li><%= link_to "Sign up", new_user_registration_path %></li>
 				  <% end %>

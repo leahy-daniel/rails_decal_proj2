@@ -9,7 +9,7 @@
 	<h3><%= @post.title %></h3>
 	<p><%= @post.content %></p>
 	<% @comments.each do |c| %>
-		<h3><%= c.user.name %></h3>
+		<h3><%= link_to c.user.name, user_path(c.user) %></h3>
 		<p><%= c.content %></p>
 	<% end %>
 	<%= button_to "New Comment", new_comment_path(@post) %>

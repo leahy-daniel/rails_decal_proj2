@@ -8,13 +8,13 @@
 </head>
 <body>
 
-	<nav class="navbar navbar-default" style="margin-bottom:0;">
+	<nav class="navbar navbar-default" style="padding-bottom:0.25%; color:white; border: 0; margin-bottom:0; background-color:#75A9BA; border-radius:0">
 	  <div class="container-fluid">
-	    <div class="navbar-header">
-	    	<a class="navbar-brand" style="color:black; font-weight:500" <%= link_to "Fuby", root_path %> </a>
+	    <div class="navbar-header" style="color:white">
+	    	<a class="navbar-brand" style="color:white; font-weight:500" <%= link_to "Fuby", root_path %> </a>
 	    </div>
 
-	    <div id="navbar" class="navbar-collapse collapse">
+	    <div id="navbar" class="navbar-collapse collapse" style="color:white">
 		    <div class="nav navbar-nav navbar-right">
 		    	<ul class="nav nav-pills pull-right" style="margin-top: .5em;">
 				  <% if user_signed_in? %>

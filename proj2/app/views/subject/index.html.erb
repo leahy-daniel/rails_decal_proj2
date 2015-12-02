@@ -4,9 +4,9 @@
   <title>Subjects</title>
 </head>
 <body>
-	<div>
+	<div class="subjects" style="margin: auto; padding:2%">
 		<% @subjects.each do |s| %>
-			<div class="list-group">
+			<div class="list-group" style="width:20%; display:table; margin:auto; margin-bottom:2%;">
 			<a href="/subject/<%= s.id %>" class="list-group-item"><%= s.name %> <span class="badge">
 				<%= s.courses.count %></span></a>
 		</div>
@@ -14,3 +14,4 @@
 	</div>
 </body>
 </html>
+

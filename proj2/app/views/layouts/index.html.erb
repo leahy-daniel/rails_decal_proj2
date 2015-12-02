@@ -97,37 +97,37 @@
 						    <h4><%= t('.sign_up', :default => "Sign up") %></h4>
 						  </div>
 						  <div class="panel-body">
-						    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form" }) do |f| %>
+						    <%= bootstrap_form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form" }) do |f| %>
 						     <div class="form-group">
-						        <%= f.label :name %>
+						        
 						        <%= f.text_field :name, class: "form-control" %>
 						      </div>
 						      <div class="control-group">
-						        <%= f.label "Year", class: "control-label" %>
+						        
 						        <div class="controls">
 						        <%= f.select(:year, options_for_select([["Freshman", "Freshman"], ["Sophomore", "Sophomore"], ["Junior" ,"Junior"], ["Senior", "Senior"]])) %>
 						        </div>
 						      </div>
 						      <div class="control-group">
-						        <%= f.label "School", class: "control-label" %>
+						        
 						        <div class="controls">
 						        <%= f.select(:school_type, options_for_select([["UC Berkeley", "UC Berkeley"], ["University of Southern California", "University of Southern California"], ["UC Los Angeles", "UC Los Angeles"]])) %>
 						        </div>
 						      </div>
 						      <div class="form-group">
-						        <%= f.label :major %>
+						        
 						        <%= f.text_field :major, class: "form-control" %>
 						      </div>
 						      <div class="form-group">
-						        <%= f.label :email %>
+						        
 						        <%= f.email_field :email, class: "form-control" %>
 						      </div>
 						      <div class="form-group">
-						        <%= f.label :password %><br />
+						        
 						        <%= f.password_field :password, class: "form-control" %>
 						      </div>
 						      <div class="form-group">
-						        <%= f.label :password_confirmation %>
+						        
 						        <%= f.password_field :password_confirmation, class: "form-control" %>
 						      </div>
 						      <%= f.submit t('.sign_up', :default => "Sign up"), class: "btn btn-primary" %>
@@ -141,9 +141,9 @@
 	</section>
 
 
-	<nav class="navbar navbar-default" style="margin-bottom:0; height:30px">
+	<nav class="navbar navbar-default" style="margin-bottom:0; background-color:#75A9BA; color: white; padding-top:0.5%">
 	  <div  class="container-fluid">
-	  	<h6 style="text-align: center">© Fuby inc.</h6>
+	  	<h6 style="text-align: center">© Fuby inc. Powered by Bootstrap. Updated <%= Date.today.year %> <%= Time.now.strftime("%B") %></h6>
 	  </div>
 	</nav>	
 

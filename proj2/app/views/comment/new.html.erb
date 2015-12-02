@@ -2,13 +2,23 @@
 <html>
 <head>
   <title>New Comment</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link href="css/hover.css" rel="stylesheet" media="all">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
 </head>
 <body>
-	<h2>Post: <%= link_to @post.title, post_path(@post) %></h2>
-	<%= form_for @comment, url: create_comment_path(@post), html: {method: "post"} do |p| %>
-		<h3>Content: </h3><%= p.text_area :content %>
-		<%= p.submit %>
-	<% end %>
+	<div class="jumbotron">
+		<h2>Post: <%= link_to @post.title, post_path(@post) %></h2>
+		<%= bootstrap_form_for @comment, class: "input-group", url: create_comment_path(@post), html: {method: "post"} do |p| %>
+			<div class="well">
+			<%= p.text_area :content, class: "input-group"%>
+			<%= p.submit %>
+			<% end %>
+			</div>
+	</div>
 </body>
 </html>
 

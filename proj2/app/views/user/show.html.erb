@@ -10,7 +10,7 @@
   <title>Course</title>
 </head>
 <body>
-<div style="font-size:30px" class="jumbotron">
+<div style="font-size:25px; margin-bottom:0; border:0" class="jumbotron">
 	<p><span class="glyphicon glyphicon-user"></span>
 	<%= @user.name %>
 	<p><span class="glyphicon glyphicon-flag"></span>
@@ -20,12 +20,12 @@
 	<p><span class="glyphicon glyphicon-tag"></span>
 	<%= @user.year %></p>
 </div>
-<div class="page-header">
-	<div style="background-color:#66b2ff; color:white" class="well"><h3> <%= @user.name %>: post history</h3></div>
+<div style="margin-top: 0;" class="page-header" id="comments">
+	<div style="background-color:#75A9BA; color:white; margin-bottom:0px; padding-top:0; padding-bottom:.5em" class="well"><h3 style="font-size:20px"> <%= @user.name %> | History</h3></div>
 		<% @posts.each do |p| %>
-			<div class="well">
-				<h4>Course name: <%= link_to p.course.name, course_path(p.course) %></h4>
-				<h4>Title: <%= link_to p.title, post_path(p) %></h4>
+			<div id="comment-well" class="well">
+				<p><strong><span style="font-size:20px">Course:</span></strong> <%= link_to p.course.name, course_path(p.course) %></p>
+				<p><strong><span style="font-size:20px">Title:</span></strong> <%= link_to p.title, post_path(p) %></p>
 				<div style="background-color: white" class="well"><p><%= p.content %></p></div>
 			</div>
 		<% end %>

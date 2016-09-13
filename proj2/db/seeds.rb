@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-colleges = [ "Berkeley", "Stanford", "USC" ]
+colleges = [ "Berkeley", "Stanfurd", "USC" ]
 colleges.each do |name|
 	College.create name: name
 end
@@ -77,7 +77,8 @@ posts = [ ["Great Class.", 1, "Love this class. Easy A. Highly recommend", 1],
   ["I love science!", 11, "Super friendly professor and the labs are very interactive.", 2],
   ["Dancing", 16, "Good class to take if you need units", 2],
   ["Dancing is fun", 15, "I like dancing.", 2], 
-  ["Is this the Krusty Krab", 12, "No this is Patrick.", 2]
+  ["Very chemistry heavy", 12, "Be sure you've taken a chemistry class before you take this.", 2]
+
   
   ["Good English Class.", 18, "Teacher was clear, and assignments were reasonable. Recommend", 1], 
   ["Engineering is hard.", 23, "Long problem sets and difficult final.", 3],
@@ -86,6 +87,7 @@ posts = [ ["Great Class.", 1, "Love this class. Easy A. Highly recommend", 1],
   ["Dancing", 25, "Great dance class. Learned lots of new moves.", 2], 
   ["Dancing is fun", 24, "I like dancing.", 1], 
   ["Poorly Organized course", 21, "Since it was the professor's first time teaching this course, there were some things that could have been done better but overal was okay.", 1]
+
   
   ]
 posts.each do |title, course_id, content, user_id|

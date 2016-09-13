@@ -24,35 +24,35 @@ subjects.each do |name, college_id|
 end
 courses = [ ["English 16A", 1, "Introduction to Creative Writing."], 
   ["English 16B", 1, "Advanced composiiton"], 
-  ["MCB 9000", 2, "Advanced af Molecular and Cellular Biology"], 
-  ["Bio 12", 2, "Advanced Biology"], 
+  ["MCB 1", 2, "Molecular and Cellular Biology"],
+  ["Bio 12", 2, "Intro to Integrative Biology"],
   ["Math 1", 3, "Basic Calculus"], 
-  ["Engineering 1", 4, "basic engineering."], 
+  ["Engineering 1", 4, "Engineering Freshman Seminar"],
   ["Dancing 1", 5, "Learn to dance."], 
-  ["Dancing 2", 5, "asdf."],
+  ["Dancing 16", 5, "Tango Dancing."],
   
-  ["English 1A", 6, "Intro to ABC's."], 
-  ["English 1B", 6, "2nd Grade Reading"], 
-  ["Physics 9000", 7, "Pretty much elementary physics."], 
-  ["Chem 12", 7, "Advanced Chemistry, not really though."], 
-  ["Math 20A", 8, "Basic Addition and Subtraction"], 
-  ["Engineering 10", 9, "Introduction to Legos."], 
-  ["CS 55", 9, "Supervised iPad Free Time"],
-  ["Art 10A", 10, "Finger Painting."], 
-  ["Media Studies 20", 10, "Introduction to Sesame Street"],
+  ["English 1A", 6, "Creative Writing"],
+  ["English 1B", 6, "Modern Poetry Analysis"],
+  ["Physics 9A", 7, "Introduction to Physics"],
+  ["Chem 12", 7, "Chemical Engineering"],
+  ["Math 20A", 8, "Linear Algebra"],
+  ["Engineering 10", 9, "Thermodynamics"],
+  ["CS 55", 9, "Introductin to Programming in Python"]
+  ["Art 10A", 10, "Drawing"],
+  ["Media Studies 20", 10, "Modern Society and Media"],
   
-  ["Literature 32A", 11, "Introduction to Creative Writing."], 
+  ["Literature 32A", 11, "Poetry"],
   ["Literature 32B", 11, "Advanced composiiton"], 
   ["MCB 93", 12, "Advanced Molecular and Cellular Biology"], 
   ["Biology 64", 12, "Advanced Biology"], 
   ["Math 104", 13, "Basic Calculus"], 
-  ["EE 16A", 14, "basic engineering."], 
-  ["Rap 6", 15, "Learn to Spit Bars."], 
+  ["EE 16A", 14, "Circuits"],
+  ["Music 1", 15, "Introduction to Western Music"],
   ["Music 10", 15, "17th Century Symphonies."] ]
 courses.each do |name, subject, description|
 	Course.create name: name, subject_id: subject, description: description
 end
-users = [ ["johndoe@gmail.com", "youknowit", "John", "Philosophy", "Freshman", "Cal" ], ["timotheyc@email.com", "menameistimmy", "Tim Caudillo", "Math", "Junior", "UCLA"], ["bryantkobe@email.com", "GOATGOAT", "Kobe Bryant", "Cognitive Science", "Sophmore", "USC"] ]
+users = [ ["johndoe@gmail.com", "youknowit", "John", "Philosophy", "Freshman", "Cal" ], ["timotheyc@email.com", "menameistimmy", "Tim Caudillo", "Math", "Junior", "UCLA"], ["bryantkobe@email.com", "GOAT", "Kobe Bryant", "Cognitive Science", "Sophmore", "USC"] ]
 users.each do |email, pass, name, major, year, school|
 	user = User.new
 	user.email = email
@@ -64,28 +64,28 @@ users.each do |email, pass, name, major, year, school|
 	user.save!
 end
 posts = [ ["Great Class.", 1, "Love this class. Easy A. Highly recommend", 1], 
-  ["Engineering is my life.", 6, "This class gave me hives.", 1], 
+  ["Highly recommend", 6, "This class was difficult at first, but the professor is very understanding.", 1],
   ["Basic calculus", 5, "The prof was pretty much not understandable. I got an F.", 1], 
-  ["Science cool.", 3, "Science post.", 1], 
-  ["Dancing", 8, "Dance post.", 1], 
-  ["Dancing is fun", 7, "I like dancing.", 1], 
-  ["I hate biology", 4, "Biology is the worst thing to ever exist.", 1], 
+  ["Yeah science!.", 3, "We did some really cool experiments in lab!", 1],
+  ["Dancing", 8, "Instructor is grea!", 1],
+  ["Dancing is fun", 7, "Loved the class, took it with some freinds and we all had fun!", 1],
+  ["I hate biology", 4, "Professor was not understanding and did not curve the course!", 1]
   
-  ["Hard Clas.", 9, "reely hard. Took me three weecs to get passd d", 2], 
-  ["I kept stepping on them.", 14, "Make sure you wear shoes.", 2], 
+  ["Solid class", 9, "Assignments can take a while but you learn a lot!", 2],
+  ["Great Professor", 14, "Professor Smith is the man!", 2],
   ["Too hard", 13, "I have no idea what was going on, failed the final.", 2], 
-  ["Science cool.", 11, "Its nise.", 2], 
-  ["Dancing", 16, "Dance post.", 2], 
+  ["I love science!", 11, "Super friendly professor and the labs are very interactive.", 2],
+  ["Dancing", 16, "Good class to take if you need units", 2],
   ["Dancing is fun", 15, "I like dancing.", 2], 
-  ["Is this the Krusty Krab", 12, "No this is Patrick.", 2],
+  ["Is this the Krusty Krab", 12, "No this is Patrick.", 2]
   
   ["Good English Class.", 18, "Teacher was clear, and assignments were reasonable. Recommend", 1], 
-  ["Engineering is my life.", 23, "This class gave me hives.", 3], 
-  ["Basic calculus", 22, "The prof was pretty much not understandable. I got an F.", 3], 
-  ["Science cool.", 20, "Science post.", 2], 
+  ["Engineering is hard.", 23, "Long problem sets and difficult final.", 3],
+  ["Okay professor", 22, "The Professor went too fast in lecture but was helpful in office hours.", 3],
+  ["Hard Final.", 20, "The homeworks and labs were very reasonable but the final was extrememely difficult.", 2],
   ["Dancing", 25, "Great dance class. Learned lots of new moves.", 2], 
   ["Dancing is fun", 24, "I like dancing.", 1], 
-  ["I hate biology", 21, "Biology is the worst thing to ever exist.", 1]
+  ["Poorly Organized course", 21, "Since it was the professor's first time teaching this course, there were some things that could have been done better but overal was okay.", 1]
   
   ]
 posts.each do |title, course_id, content, user_id|

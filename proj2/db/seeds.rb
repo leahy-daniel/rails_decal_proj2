@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-colleges = [ "Berkeley", "Stanfurd", "USC" ]
+colleges = [ "Berkeley", "Stanford", "USC" ]
 colleges.each do |name|
 	College.create name: name
 end
